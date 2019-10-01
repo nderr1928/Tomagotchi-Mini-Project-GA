@@ -3,13 +3,16 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Nico's Tomagotchi Mini Project</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<body>
+<body class="grid-container">
 	<header>
 		<input type="text" class="tomagotchi-name" placeholder="Enter Tomagotchi name">
 		<button class="name-submit">Submit</button>
 		<p>Tomagotchi name will go here</p>
+		<p>Tomagochi stats will be here</p>
 	</header>
+	
 	<aside>
 		<p>Tomagochi thoughts depending on the stats at the moment. Ei.- I could go for a nap; I can hardly keep my eyes open; I TAKE NAP HERE, GOODNIGHT</p>
 	</aside>
@@ -17,9 +20,13 @@
 	<main>
 		<p>Actual images and background</p>
 	</main>
+
 	<footer>
-		<p>Tomagochi stats will be here</p>
+		<button id="feed">Feed</button>
+		<button id="play">Play</button>
+		<button id="sleep">Sleep</button>
 	</footer>
+
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
