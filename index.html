@@ -14,7 +14,21 @@
 	</header>
 	
 	<aside>
-		<p>Tomagochi thoughts depending on the stats at the moment. Ei.- I could go for a nap; I can hardly keep my eyes open; I TAKE NAP HERE, GOODNIGHT</p>
+		<div id="stats-container">
+			<h3>Tomagotchi Stats</h3>
+		</div>
+		<div class="stats">
+			<h3>Hunger</h3>
+			<h3 id="feed">0</h3>
+		</div>
+		<div class="stats">
+			<h3>Boredom</h3>
+			<h3 id="play">0</h3>
+		</div>
+		<div class="stats">
+			<h3>Sleepiness</h3>
+			<h3 id="sleep">0</h3>
+		</div>
 	</aside>
 
 	<main>
@@ -22,9 +36,9 @@
 	</main>
 
 	<footer>
-		<button id="feed">Feed</button>
-		<button id="play">Play</button>
-		<button id="sleep">Sleep</button>
+		<button class="action">Feed</button>
+		<button class="action">Play</button>
+		<button class="action">Sleep</button>
 	</footer>
 
 	<script type="text/javascript" src="js/app.js"></script>

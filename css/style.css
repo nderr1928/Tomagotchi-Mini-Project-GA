@@ -1,21 +1,15 @@
-.grid-container{
-	display: grid;
-	min-height: 100vh;
-	grid-template-columns: 100px 1fr;
-	grid-template-rows: 100px 1fr 50px;
-	grid-template-areas:
-	"header header"
-	"aside main"
-	"footer footer";
-}
-
 aside{
-	background-color: maroon;
+	background-color: rgba(128, 0, 0, .5);
 	grid-area: aside;
 	grid-row: 2;
 	grid-column: 1;
 	justify-content: center;
 	align-content: center;
+	display: grid;
+	grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
+	place-items: center;
+	text-align: center;
 }
 
 header{
@@ -30,11 +24,32 @@ footer{
 	grid-area: footer;
 	grid-row: 3;
 	grid-column: 1 / span 2;
-	justify-content: center;
-	align-content: start;
 	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	place-items: center;
+}
+
+footer > button{
+	height: 50%;
+	width: 50%;
+	border-radius: 50%;
 }
 
 main{
+	background-image: url('https://image.freepik.com/free-vector/cartoon-living-room-interior-background-template-cozy-house-apartment-concept_33099-196.jpg');
+	background-color: pink;
+	background-size: cover;
+	background-position: center;
+}
 
+.grid-container{
+	display: grid;
+	min-height: 100vh;
+	grid-template-columns: 100px 1fr;
+	grid-template-rows: 100px 1fr 50px;
+	grid-template-areas:
+	"header header"
+	"aside main"
+	"footer footer";
 }
