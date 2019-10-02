@@ -143,16 +143,18 @@ class Tomagotchi {
 		const randomIndex = Math.floor(Math.random()*4);
 		let imageURL = "";
 		if(randomIndex === 0){
-			imageURL = 'url(Images/baby/baby1.jpeg)';
+			imageURL = 'url(Images/baby/baby1.png)';
 		} else if(randomIndex === 1){
 			imageURL = 'url(Images/baby/baby2.png)';
 		} else if(randomIndex === 2){
 			imageURL = 'url(Images/baby/baby3.png)';
 		} else{
-			imageURL = 'url(Images/baby/baby4.jpg)';
+			imageURL = 'url(Images/baby/baby4.png)';
 		}
 		console.log(imageURL);
 		$('#image-container').css('background-image', imageURL);
+		$('#image-container').css('height', "100px");
+		$('#image-container').css('width', "100px");
 	}
 	childImageRandomizer(){
 		const randomIndex = Math.floor(Math.random()*4);
@@ -160,20 +162,22 @@ class Tomagotchi {
 		if(randomIndex === 0){
 			imageURL = "url(Images/child/child1.png)";
 		} else if(randomIndex === 1){
-			imageURL = "url(Images/child/child2.jpeg)";
+			imageURL = "url(Images/child/child2.png)";
 		} else if(randomIndex === 2){
 			imageURL = "url(Images/child/child3.png)";;
 		} else{
-			imageURL = "url(Images/child/child4.jpeg)";;
+			imageURL = "url(Images/child/child4.png)";;
 		}
 		console.log(imageURL);
 		$('#image-container').css('background-image', imageURL);
+		$('#image-container').css('height', "200px");
+		$('#image-container').css('width', "200px");
 	}
 	adultImageRandomizer(){
 		const randomIndex = Math.floor(Math.random()*4);
 		let imageURL = "";
 		if(randomIndex === 0){
-			imageURL = "url(Images/adult/adult1.jpg)";
+			imageURL = "url(Images/adult/adult1.png)";
 		} else if(randomIndex === 1){
 			imageURL = "url(Images/adult/adult2.png)";
 		} else if(randomIndex === 2){
@@ -183,22 +187,25 @@ class Tomagotchi {
 		}
 		console.log(imageURL);
 		$('#image-container').css('background-image', imageURL);
+		$('#image-container').css('height', "300px");
+		$('#image-container').css('width', "300px");
 	}
 	elderImageRandomizer(){
 		const randomIndex = Math.floor(Math.random()*4);
 		let imageURL = "";
 		if(randomIndex === 0){
-			imageURL = "url(Images/elder/elder1.jpg)";
+			imageURL = "url(Images/elder/elder1.png)";
 		} else if(randomIndex === 1){
 			imageURL = "url(Images/elder/elder2.png)";
 		} else if(randomIndex === 2){
-			imageURL = "url(Images/elder/elder3.jpeg)";;
+			imageURL = "url(Images/elder/elder3.png)";;
 		} else{
-			imageURL = "url(Images/elder/elder4.jpg)";;
+			imageURL = "url(Images/elder/elder4.png)";;
 		}
 		console.log(imageURL);
 		$('#image-container').css('background-image', imageURL);
-		console.log($('#image-container').css('background-image'));
+		$('#image-container').css('height', "200px");
+		$('#image-container').css('width', "200px");
 	}
 };
 
