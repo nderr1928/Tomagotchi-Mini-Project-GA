@@ -70,7 +70,7 @@ main{
 #image-container{
 	height: 300px;
 	width: 300px;
-	background-image: url("../Images/egg.gif");
+	background-image: url(../Images/egg.gif);
 	background-size: cover;
 	background-position: center;
 }
