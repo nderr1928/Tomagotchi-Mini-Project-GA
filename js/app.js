@@ -1,3 +1,20 @@
+const $nameSubmit = $('.name-submit');
+const $feed = $('.action_feed');
+const $play = $('.action_play');
+const $sleep = $('.action_sleep');
+const $nameInput = $('.tomagotchi-name')
+let currentTomagotchi = "";
+let current;
+
+$nameSubmit.on('click', (e) => {
+	//console.log($(e.target).text());
+	if($($nameInput).val() !== ""){
+		console.log($($nameInput).val());
+		currentTomagotchi = $($nameInput).val();
+		current = new Tomagotchi(currentTomagotchi);
+	}
+});
+
 class Tomagotchi {
 	constructor(name){
 		this.name = name;
@@ -7,3 +24,4 @@ class Tomagotchi {
 		this.age = 0;
 	}
 };
+
