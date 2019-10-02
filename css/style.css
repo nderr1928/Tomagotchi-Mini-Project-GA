@@ -6,7 +6,7 @@ aside{
 	justify-content: center;
 	align-content: center;
 	display: grid;
-	grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+	grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr;
 	place-items: center;
 	text-align: center;
@@ -32,6 +32,7 @@ header > div > button{
 header > div > input{
 	width: 75%;
 	margin-left: 10px;
+	text-align: center;
 }
 
 header > h1{
