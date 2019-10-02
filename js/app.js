@@ -121,19 +121,19 @@ class Tomagotchi {
 	failureConditions(){
 		if(this.age >= 20){
 			alert(`${this.name} has lived a good life and passed due to old age. You should be proud of yourself for keeping them alive so long!`);
-			$('#image-container').css('background-image', 'url(Images/death.jpeg)');
+			$('#image-container').css('background-image', 'url(Images/death.gif)');
 			return true;
 		} else if(this.hunger >= 10){
 			alert(`${this.name} has starved to death. You should be ashamed at the neglect to feed your friend.`);
-			$('#image-container').css('background-image', 'url(Images/death.jpeg)');
+			$('#image-container').css('background-image', 'url(Images/death.gif)');
 			return true;
 		} else if(this.boredom >= 10){
 			alert(`${this.name} was so bored that it ran away. Don't try and find em', they'd probably enjoy themselves more away from you.`);
-			$('#image-container').css('background-image', 'url(Images/death.jpeg)');
+			$('#image-container').css('background-image', 'url(Images/death.gif)');
 			return true;
 		} else if(this.sleepiness >= 10){
 			alert(`${this.name} was so exhuasted that they fell into a permanent coma. Way to go, sport.`);
-			$('#image-container').css('background-image', 'url(Images/death.jpeg)');
+			$('#image-container').css('background-image', 'url(Images/death.gif)');
 			return true;
 		}  else {
 			return false;
