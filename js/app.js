@@ -125,6 +125,11 @@ class Tomagotchi {
 			return false;
 		}
 	}
+	babyImageRandomizer(){
+		const randomIndex = Math.floor(Math.random()*4);
+		let imageURL = "";
+		if()
+	}
 	// removeTomagotchiInformation(){
 	// 	this.
 	// }

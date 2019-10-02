@@ -62,6 +62,17 @@ main{
 	background-color: pink;
 	background-size: cover;
 	background-position: center;
+	justify-content: center;
+	align-content: center;
+	display: grid;
+}
+
+#image-container{
+	height: 300px;
+	width: 300px;
+	background-image: url("../Images/egg.gif");
+	background-size: cover;
+	background-position: center;
 }
 
 
