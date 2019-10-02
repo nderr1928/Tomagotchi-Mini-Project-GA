@@ -128,10 +128,54 @@ class Tomagotchi {
 	babyImageRandomizer(){
 		const randomIndex = Math.floor(Math.random()*4);
 		let imageURL = "";
-		if()
+		if(randomIndex === 0){
+			imageURL = "url('../Images/baby/baby1')";
+		} else if(randomIndex === 1){
+			imageURL = "url('../Images/baby/baby2')";
+		} else if(randomIndex === 2){
+			imageURL = "url('../Images/baby/baby3')";
+		} else{
+			imageURL = "url('../Images/baby/baby4')";
+		}
 	}
-	// removeTomagotchiInformation(){
-	// 	this.
-	// }
+	childImageRandomizer(){
+		const randomIndex = Math.floor(Math.random()*4);
+		let imageURL = "";
+		if(randomIndex === 0){
+			imageURL = "url('../Images/child/child1')";
+		} else if(randomIndex === 1){
+			imageURL = "url('../Images/child/child2')";
+		} else if(randomIndex === 2){
+			imageURL = "url('../Images/child/child3')";;
+		} else{
+			imageURL = "url('../Images/child/child4')";;
+		}
+	}
+	adultImageRandomizer(){
+		const randomIndex = Math.floor(Math.random()*4);
+		let imageURL = "";
+		if(randomIndex === 0){
+			imageURL = "url('../Images/adult/adult1')";
+		} else if(randomIndex === 1){
+			imageURL = "url('../Images/adult/adult2')";
+		} else if(randomIndex === 2){
+			imageURL = "url('../Images/adult/adult3')";;
+		} else{
+			imageURL = "url('../Images/adult/adult4')";;
+		}
+	}
+	elderImageRandomizer(){
+		const randomIndex = Math.floor(Math.random()*4);
+		let imageURL = "";
+		if(randomIndex === 0){
+			imageURL = "url('../Images/elder/elder1')";
+		} else if(randomIndex === 1){
+			imageURL = "url('../Images/elder/elder2')";
+		} else if(randomIndex === 2){
+			imageURL = "url('../Images/elder/elder3')";;
+		} else{
+			imageURL = "url('../Images/elder/elder4')";;
+		}
+	}
 };
 
