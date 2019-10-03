@@ -28,11 +28,12 @@ $nameSubmit.on('click', (e) => {
 	}
 });
 
+
 $feedButton.on('click', (e) => {
 	console.log('feed');
 	if(current.hunger > 1){
 		current.hunger -=2;
-		$($hunger).css("width", `${this.hunger}%`);
+		$($hunger).css("width", `${current.hunger}%`);
 	}
 });
 
@@ -40,7 +41,7 @@ $playButton.on('click', (e) => {
 	console.log('play');
 	if(current.boredom > 1){
 		current.boredom-=2;
-		$($boredom).css("width", `${this.boredom}%`);
+		$($boredom).css("width", `${current.boredom}%`);
 	}
 });
 
@@ -48,7 +49,7 @@ $sleepButton.on('click', (e) => {
 	console.log('sleep');
 		if(current.sleepiness > 1){
 		current.sleepiness-=2;
-		$($sleepiness).css("width", `${this.sleepiness}%`);
+		$($sleepiness).css("width", `${current.sleepiness}%`);
 	}
 });
 
