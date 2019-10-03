@@ -13,7 +13,7 @@ aside{
 }
 
 header{
-	background-color: red;
+	background-color: rgba(255, 0, 0, 0.9);
 	grid-area: header;
 	grid-row: 1;
 	grid-column: 1 span 2;
@@ -41,7 +41,7 @@ header > h1{
 }
 
 footer{
-	background-color: green;
+	background-color: rgba(0, 128, 0, 1);
 	grid-area: footer;
 	grid-row: 3;
 	grid-column: 1 / span 2;

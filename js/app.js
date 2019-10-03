@@ -130,7 +130,7 @@ class Tomagotchi {
 			this.animation();
 			return true;
 		} else if(this.boredom >= 10){
-			alert(`${this.name} was so bored that it ran away. Don't try and find em', they'd probably enjoy themselves more away from you.`);
+			alert(`${this.name} was so bored that it died. They literally DIED of boredom. You're not fun to be around..`);
 			$('#image-container').css('background-image', 'url(Images/death.gif)');
 			this.animation();
 			return true;
@@ -157,6 +157,7 @@ class Tomagotchi {
 			imageURL = 'url(Images/baby/baby4.png)';
 		}
 		console.log(imageURL);
+		$('#stage').text('Baby');
 		$('#image-container').css('background-image', imageURL);
 		$('#image-container').css('height', "100px");
 		$('#image-container').css('width', "100px");
@@ -176,6 +177,7 @@ class Tomagotchi {
 			imageURL = "url(Images/child/child4.png)";;
 		}
 		console.log(imageURL);
+		$('#stage').text('Child');
 		$('#image-container').css('background-image', imageURL);
 		$('#image-container').css('height', "200px");
 		$('#image-container').css('width', "200px");
@@ -195,6 +197,7 @@ class Tomagotchi {
 			imageURL = "url(Images/adult/adult4.png)";;
 		}
 		console.log(imageURL);
+		$('#stage').text('Adult');
 		$('#image-container').css('background-image', imageURL);
 		$('#image-container').css('height', "300px");
 		$('#image-container').css('width', "300px");
@@ -214,6 +217,7 @@ class Tomagotchi {
 			imageURL = "url(Images/elder/elder4.png)";;
 		}
 		console.log(imageURL);
+		$('#stage').text('Elder');
 		$('#image-container').css('background-image', imageURL);
 		$('#image-container').css('height', "200px");
 		$('#image-container').css('width', "200px");
