@@ -86,7 +86,7 @@ class Tomagotchi {
 				clearInterval(boredomCounter);
 				clearInterval(sleepinessCounter);
 			}
-		}, 3000);
+		}, 6000);
 		const hungerCounter = setInterval(() => {
 			this.hunger++;
 			$($hunger).text(this.hunger);
@@ -220,48 +220,48 @@ class Tomagotchi {
 		this.animationElder();
 	}
 	animationBaby(){
-		$('#image-container').animate({left: '600%'}, 1000)
-		$('#image-container').animate({bottom: '200%'}, 1000)
-		$('#image-container').animate({left: '-700%'}, 3000)
-		$('#image-container').animate({bottom: '-300%'}, 2000)
-		$('#image-container').animate({left: '500%'}, 2000)
-		$('#image-container').animate({left: '-500%'}, 2000)
-		$('#image-container').animate({bottom: '-200%'}, 1000)
-		$('#image-container').animate({left: '0%'}, 1000)
-		$('#image-container').animate({bottom: '0%'}, 1000)
+		$('#image-container').animate({left: '600%'}, 2000)
+		$('#image-container').animate({bottom: '200%'}, 2000)
+		$('#image-container').animate({left: '-700%'}, 6000)
+		$('#image-container').animate({bottom: '-300%'}, 4000)
+		$('#image-container').animate({left: '500%'}, 4000)
+		$('#image-container').animate({left: '-500%'}, 4000)
+		$('#image-container').animate({bottom: '-200%'}, 2000)
+		$('#image-container').animate({left: '0%'}, 2000)
+		$('#image-container').animate({bottom: '0%'}, 2000)
 	}
 	animationChild(){
-		$('#image-container').animate({left: '-200%'}, 1000)
-		$('#image-container').animate({top: '100%'}, 1000)
-		$('#image-container').animate({left: '200%'}, 3000)
-		$('#image-container').animate({top: '-200%'}, 2000)
-		$('#image-container').animate({left: '-300%'}, 2000)
-		$('#image-container').animate({left: '300%'}, 2000)
-		$('#image-container').animate({top: '-100%'}, 1000)
-		$('#image-container').animate({left: '0%'}, 1000)
-		$('#image-container').animate({top: '0%'}, 1000)
+		$('#image-container').animate({left: '-200%'}, 2000)
+		$('#image-container').animate({top: '100%'}, 2000)
+		$('#image-container').animate({left: '200%'}, 6000)
+		$('#image-container').animate({top: '-200%'}, 4000)
+		$('#image-container').animate({left: '-300%'}, 4000)
+		$('#image-container').animate({left: '300%'}, 4000)
+		$('#image-container').animate({top: '-100%'}, 2000)
+		$('#image-container').animate({left: '0%'}, 2000)
+		$('#image-container').animate({top: '0%'}, 2000)
 	}
 	animationAdult(){
-		$('#image-container').animate({left: '-50%'}, 500)
-		$('#image-container').animate({left: '-100%'}, 500)
-		$('#image-container').animate({left: '-200%'}, 1000)
-		$('#image-container').animate({left: '200%'}, 4000)
-		$('#image-container').animate({left: '100%'}, 1000)
-		$('#image-container').animate({left: '50%'}, 500)
-		$('#image-container').animate({left: '0%'}, 500)
-		$('#image-container').animate({top: '-100%'}, 500)
-		$('#image-container').animate({top: '100%'}, 500)
-		$('#image-container').animate({top: '0%'}, 500)
+		$('#image-container').animate({left: '-50%'}, 1000)
+		$('#image-container').animate({left: '-100%'}, 1000)
+		$('#image-container').animate({left: '-200%'}, 2000)
+		$('#image-container').animate({left: '200%'}, 8000)
+		$('#image-container').animate({left: '100%'}, 2000)
+		$('#image-container').animate({left: '50%'}, 1000)
+		$('#image-container').animate({left: '0%'}, 1000)
+		$('#image-container').animate({top: '-100%'}, 1000)
+		$('#image-container').animate({top: '100%'}, 1000)
+		$('#image-container').animate({top: '0%'}, 1000)
 	}
 	animationElder(){
-		$('#image-container').animate({left: '300%'}, 3000)
-		$('#image-container').animate({left: '-300%'}, 6000)
-		$('#image-container').animate({left: '0%'}, 3000)
+		$('#image-container').animate({left: '300%'}, 6000)
+		$('#image-container').animate({left: '-300%'}, 12000)
+		$('#image-container').animate({left: '0%'}, 6000)
 	}
 	animation(){
-		$('#image-container').animate({left: '500%'}, 1000)
-		$('#image-container').animate({left: '-500%'}, 2000)
-		$('#image-container').animate({left: '0%'}, 1000)	
+		$('#image-container').animate({left: '500%'}, 2000)
+		$('#image-container').animate({left: '-500%'}, 4000)
+		$('#image-container').animate({left: '0%'}, 2000)	
 	}
 };
 
