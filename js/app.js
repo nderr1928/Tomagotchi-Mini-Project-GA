@@ -8,13 +8,16 @@ const $playButton = $('.action_play');
 const $sleepButton = $('.action_sleep');
 const $nameInput = $('.tomagotchi-name')
 let currentTomagotchi = "";
-let current;
+let current = null;
+const intervals =[];
 console.log($('#image-container').css('background-image'));
 
 $nameSubmit.on('click', (e) => {
 	if($($nameInput).val() !== ""){
 		//$('main').empty();
-		//current.reset();
+		if(current !== null){
+			current.reset();
+		}
 		console.log($($nameInput).val());
 		$('h1').text($($nameInput).val());
 		currentTomagotchi = $($nameInput).val();
@@ -91,6 +94,7 @@ class Tomagotchi {
 		const hungerCounter = setInterval(() => {
 			const randomIndex = Math.floor(Math.random()*(10-2)+2);
 			this.hunger += randomIndex;
+			console.log("hunger: ", randomIndex);
 			$($hunger).css("width", `${this.hunger}%`);
 			if(current.failureConditions() === true){
 				clearInterval(ageCounter);
@@ -102,6 +106,7 @@ class Tomagotchi {
 		const boredomCounter = setInterval(() => {
 			const randomIndex = Math.floor(Math.random()*(10-2)+2);
 			this.boredom += randomIndex;
+			console.log("Boredom: ", randomIndex);
 			$($boredom).css("width", `${this.boredom}%`);
 			if(current.failureConditions() === true){
 				clearInterval(ageCounter);
@@ -113,6 +118,7 @@ class Tomagotchi {
 		const sleepinessCounter = setInterval(() => {
 			const randomIndex = Math.floor(Math.random()*(10-2)+2);
 			this.sleepiness += randomIndex;
+			console.log("sleepiness: ", randomIndex);
 			$($sleepiness).css("width", `${this.sleepiness}%`);
 			if(current.failureConditions() === true){
 				clearInterval(ageCounter);
@@ -121,15 +127,16 @@ class Tomagotchi {
 				clearInterval(sleepinessCounter);
 			}
 		}, 5000);
+		intervals.push(ageCounter);
+		intervals.push(hungerCounter);
+		intervals.push(boredomCounter);
+		intervals.push(sleepinessCounter);
 	}
 	failureConditions(){
 		if(this.age >= 20){
 			alert(`${this.name} has lived a good life and passed due to old age and surfs the universe. You should be proud of yourself for keeping them alive so long!`);
 			$('#image-container').css('background-image', 'url(Images/death.gif)');
-			$('#image-container').animate({left: '500%',
-											left: '-500%',
-											left: '0%'}, 
-											6000, this.animation()); 	
+			this.animation(); 	
 			return true;
 		} else if(this.hunger >= 100){
 			alert(`${this.name} has starved to death. You should be ashamed at the neglect to feed your friend.`);
@@ -270,16 +277,21 @@ class Tomagotchi {
 		$('#image-container').animate({left: '0%'}, 6000)
 	}
 	animation(){
+		$('#image-container').stop()
+		$('#image-container').animate({left: '0%'}, 1)
+		$('#image-container').animate({top: '0%'}, 1)
 		$('#image-container').animate({left: '500%'}, 2000)
 		$('#image-container').animate({left: '-500%'}, 4000)
 		$('#image-container').animate({left: '0%'}, 2000)	
 	}
-	// reset(){
-	// 	//this.name = null;
-	// 	this.hunger = null;
-	// 	this.sleepiness = null;
-	// 	this.boredom = null;
-	// 	this.age = null;
-	// }
+	reset(){
+		console.log('reset');
+		this.name = "";
+		this.hunger = 50;
+		this.sleepiness = 50;
+		this.boredom = 50;
+		this.age = 0;
+		intervals.forEach(clearInterval);
+	}
 };
 
