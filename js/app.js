@@ -86,7 +86,7 @@ class Tomagotchi {
 				clearInterval(boredomCounter);
 				clearInterval(sleepinessCounter);
 			}
-		}, 2000);
+		}, 3000);
 		const hungerCounter = setInterval(() => {
 			this.hunger++;
 			$($hunger).text(this.hunger);
@@ -122,24 +122,29 @@ class Tomagotchi {
 		if(this.age >= 20){
 			alert(`${this.name} has lived a good life and passed due to old age. You should be proud of yourself for keeping them alive so long!`);
 			$('#image-container').css('background-image', 'url(Images/death.gif)');
+			this.animation();
 			return true;
 		} else if(this.hunger >= 10){
 			alert(`${this.name} has starved to death. You should be ashamed at the neglect to feed your friend.`);
 			$('#image-container').css('background-image', 'url(Images/death.gif)');
+			this.animation();
 			return true;
 		} else if(this.boredom >= 10){
 			alert(`${this.name} was so bored that it ran away. Don't try and find em', they'd probably enjoy themselves more away from you.`);
 			$('#image-container').css('background-image', 'url(Images/death.gif)');
+			this.animation();
 			return true;
 		} else if(this.sleepiness >= 10){
 			alert(`${this.name} was so exhuasted that they fell into a permanent coma. Way to go, sport.`);
 			$('#image-container').css('background-image', 'url(Images/death.gif)');
+			this.animation();
 			return true;
 		}  else {
 			return false;
 		}
 	}
 	babyImageRandomizer(){
+		//alert('Say hello to your tomagotchi baby!');
 		const randomIndex = Math.floor(Math.random()*4);
 		let imageURL = "";
 		if(randomIndex === 0){
@@ -155,8 +160,10 @@ class Tomagotchi {
 		$('#image-container').css('background-image', imageURL);
 		$('#image-container').css('height', "100px");
 		$('#image-container').css('width', "100px");
+		this.animationBaby();
 	}
 	childImageRandomizer(){
+		//alert(`${this.name} has grown to a child!`);
 		const randomIndex = Math.floor(Math.random()*4);
 		let imageURL = "";
 		if(randomIndex === 0){
@@ -172,8 +179,10 @@ class Tomagotchi {
 		$('#image-container').css('background-image', imageURL);
 		$('#image-container').css('height', "200px");
 		$('#image-container').css('width', "200px");
+		this.animationChild();
 	}
 	adultImageRandomizer(){
+		//alert(`${this.name} is now an adult!`);
 		const randomIndex = Math.floor(Math.random()*4);
 		let imageURL = "";
 		if(randomIndex === 0){
@@ -189,8 +198,10 @@ class Tomagotchi {
 		$('#image-container').css('background-image', imageURL);
 		$('#image-container').css('height', "300px");
 		$('#image-container').css('width', "300px");
+		this.animationAdult();
 	}
 	elderImageRandomizer(){
+		//alert(`From an adult, ${this.name} is now an elder!`);
 		const randomIndex = Math.floor(Math.random()*4);
 		let imageURL = "";
 		if(randomIndex === 0){
@@ -206,6 +217,51 @@ class Tomagotchi {
 		$('#image-container').css('background-image', imageURL);
 		$('#image-container').css('height', "200px");
 		$('#image-container').css('width', "200px");
+		this.animationElder();
+	}
+	animationBaby(){
+		$('#image-container').animate({left: '600%'}, 1000)
+		$('#image-container').animate({bottom: '200%'}, 1000)
+		$('#image-container').animate({left: '-700%'}, 3000)
+		$('#image-container').animate({bottom: '-300%'}, 2000)
+		$('#image-container').animate({left: '500%'}, 2000)
+		$('#image-container').animate({left: '-500%'}, 2000)
+		$('#image-container').animate({bottom: '-200%'}, 1000)
+		$('#image-container').animate({left: '0%'}, 1000)
+		$('#image-container').animate({bottom: '0%'}, 1000)
+	}
+	animationChild(){
+		$('#image-container').animate({left: '-200%'}, 1000)
+		$('#image-container').animate({top: '100%'}, 1000)
+		$('#image-container').animate({left: '200%'}, 3000)
+		$('#image-container').animate({top: '-200%'}, 2000)
+		$('#image-container').animate({left: '-300%'}, 2000)
+		$('#image-container').animate({left: '300%'}, 2000)
+		$('#image-container').animate({top: '-100%'}, 1000)
+		$('#image-container').animate({left: '0%'}, 1000)
+		$('#image-container').animate({top: '0%'}, 1000)
+	}
+	animationAdult(){
+		$('#image-container').animate({left: '-50%'}, 500)
+		$('#image-container').animate({left: '-100%'}, 500)
+		$('#image-container').animate({left: '-200%'}, 1000)
+		$('#image-container').animate({left: '200%'}, 4000)
+		$('#image-container').animate({left: '100%'}, 1000)
+		$('#image-container').animate({left: '50%'}, 500)
+		$('#image-container').animate({left: '0%'}, 500)
+		$('#image-container').animate({top: '-100%'}, 500)
+		$('#image-container').animate({top: '100%'}, 500)
+		$('#image-container').animate({top: '0%'}, 500)
+	}
+	animationElder(){
+		$('#image-container').animate({left: '300%'}, 3000)
+		$('#image-container').animate({left: '-300%'}, 6000)
+		$('#image-container').animate({left: '0%'}, 3000)
+	}
+	animation(){
+		$('#image-container').animate({left: '500%'}, 1000)
+		$('#image-container').animate({left: '-500%'}, 2000)
+		$('#image-container').animate({left: '0%'}, 1000)	
 	}
 };
 
