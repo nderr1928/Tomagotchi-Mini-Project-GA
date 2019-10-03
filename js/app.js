@@ -28,6 +28,44 @@ $nameSubmit.on('click', (e) => {
 	}
 });
 
+$('html').on('keypress', (e) => {
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+    	//console.log(keycode);
+    	if($($nameInput).val() !== ""){
+		//$('main').empty();
+			if(current !== null){
+				current.reset();
+			}
+			console.log($($nameInput).val());
+			$('h1').text($($nameInput).val());
+			currentTomagotchi = $($nameInput).val();
+			$($nameInput).val('');
+			current = new Tomagotchi(currentTomagotchi);
+			current.babyImageRandomizer();
+			current.tomagotchiLife();
+		}
+	}
+	if(keycode === 115){
+		if(current.sleepiness > 1){
+			current.sleepiness-=2;
+			$($sleepiness).css("width", `${current.sleepiness}%`);
+		}
+	}
+	if(keycode === 102){
+		if(current.hunger > 1){
+			current.hunger -=2;
+			$($hunger).css("width", `${current.hunger}%`);
+		}
+	}
+	if(keycode === 112){
+		if(current.boredom > 1){
+			current.boredom -=2;
+			$($boredom).css("width", `${current.boredom}%`);
+		}
+	}
+});
+
 
 $feedButton.on('click', (e) => {
 	console.log('feed');
