@@ -30,6 +30,7 @@ $nameSubmit.on('click', (e) => {
 
 $('html').on('keypress', (e) => {
     var keycode = (event.keyCode ? event.keyCode : event.which);
+    console.log(keycode);
     if(keycode == '13'){
     	//console.log(keycode);
     	if($($nameInput).val() !== ""){
